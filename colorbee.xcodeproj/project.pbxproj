@@ -16,6 +16,8 @@
 		4C5AF09B20CAB7EE0018049B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C5AF09A20CAB7EE0018049B /* Assets.xcassets */; };
 		4C5AF09E20CAB7EE0018049B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5AF09C20CAB7EE0018049B /* LaunchScreen.storyboard */; };
 		4C5AF0AB20CABCA50018049B /* Joueur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AF0AA20CABCA50018049B /* Joueur.swift */; };
+		4C5AF0AE20CABF530018049B /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AF0AD20CABF530018049B /* Constantes.swift */; };
+		4C5AF0B020CABFE30018049B /* Sol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AF0AF20CABFE30018049B /* Sol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		4C5AF09D20CAB7EE0018049B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C5AF09F20CAB7EE0018049B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C5AF0AA20CABCA50018049B /* Joueur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joueur.swift; sourceTree = "<group>"; };
+		4C5AF0AD20CABF530018049B /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
+		4C5AF0AF20CABFE30018049B /* Sol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		4C5AF08C20CAB7ED0018049B /* colorbee */ = {
 			isa = PBXGroup;
 			children = (
+				4C5AF0AC20CABF420018049B /* Ressources */,
 				4C5AF0A920CABC8F0018049B /* Model */,
 				4C5AF0A820CABA8C0018049B /* Scene */,
 				4C5AF0A720CABA7A0018049B /* Controller */,
@@ -104,8 +109,17 @@
 			isa = PBXGroup;
 			children = (
 				4C5AF0AA20CABCA50018049B /* Joueur.swift */,
+				4C5AF0AF20CABFE30018049B /* Sol.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4C5AF0AC20CABF420018049B /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				4C5AF0AD20CABF530018049B /* Constantes.swift */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,7 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C5AF0AE20CABF530018049B /* Constantes.swift in Sources */,
 				4C5AF09420CAB7ED0018049B /* GameScene.swift in Sources */,
+				4C5AF0B020CABFE30018049B /* Sol.swift in Sources */,
 				4C5AF0AB20CABCA50018049B /* Joueur.swift in Sources */,
 				4C5AF09620CAB7ED0018049B /* GameViewController.swift in Sources */,
 				4C5AF08E20CAB7ED0018049B /* AppDelegate.swift in Sources */,

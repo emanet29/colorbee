@@ -12,6 +12,7 @@ import GameplayKit
 class GameScene: SKScene {
     
     let cameraNode = SKCameraNode()
+    let sol = Sol()
     var joueur: Joueur?
     
     override func didMove(to view: SKView) {
@@ -20,6 +21,9 @@ class GameScene: SKScene {
         camera = cameraNode
         addChild(cameraNode)
         cameraNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        
+        sol.miseEnPlace(scene: self)
+        addChild(sol)
         
         ajouterJoueur()
     }
