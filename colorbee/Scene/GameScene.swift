@@ -16,6 +16,8 @@ class GameScene: SKScene {
     var joueur: Joueur?
     var scoreLabel = MonLabel()
     var scoreDuJoueur = 0
+    var obstacles = [Obstacle]()
+    let espacement: CGFloat = 750
     
     override func didMove(to view: SKView) {
         physicsWorld.gravity.dy = -5
@@ -32,6 +34,10 @@ class GameScene: SKScene {
         cameraNode.addChild(scoreLabel)
         
         ajouterJoueur()
+        
+        for _ in (0...2) {
+            ajouterObstacle()
+        }
     }
     
     func ajouterJoueur(){
@@ -41,6 +47,22 @@ class GameScene: SKScene {
             addChild(joueur!)
         }
     
+    }
+    
+    func ajouterObstacle() {
+        let obstacle: Obstacle?
+        if aleatoire() {
+            obstacle = Cercle()
+        } else {
+            obstacle = Carre()
+        }
+        obstacle?.miseEnPlace()
+        if obstacle != nil {
+            obstacles.append(obstacle!)
+            obstacle?.position = CGPoint(x: cameraNode.frame.midX, y: espacement * CGFloat(obstacles.count))
+            addChild(obstacle!)
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
