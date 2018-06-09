@@ -13,6 +13,7 @@ class Joueur: SKShapeNode {
     func miseEnPlace(scene: SKScene) {
         changerDeCouleur()
         position = CGPoint(x: scene.size.width / 2, y: 200)
+        zPosition = 1
         let body = SKPhysicsBody(circleOfRadius: 25)
         body.affectedByGravity = true
         body.categoryBitMask = MASK_JOUEUR
@@ -22,12 +23,12 @@ class Joueur: SKShapeNode {
     }
     
     func sauter() {
-        physicsBody?.velocity.dy = 500
+        physicsBody?.velocity.dy = 350
     }
     
     func changerDeCouleur() {
         let couleur = COULEURS[Int(arc4random_uniform(UInt32(4)))]
         fillColor = couleur
-        strokeColor = couleur
+        strokeColor = .black
     }
 }
